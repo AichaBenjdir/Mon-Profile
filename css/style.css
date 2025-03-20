@@ -1,44 +1,54 @@
-body{
+body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
-.container{
+
+.container {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow:  0 4px 10px 10px rgb(0, 0,0 ,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-header{
+header {
     text-align: center;
 }
-header h1{
-font-style: 2.5em;
-color: blue;
+
+header h1 {
+    font-size: 2.5em;
+    color: blue;
 }
-header p{
-font-style: 1.2em;
-color: #666;
+
+header p {
+    font-size: 1.2em;
+    color: #666;
 }
-#profile{
+
+#profile {
     display: flex;
-justify-content: center;
-align-items: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
-#profile img{
-   border-radius: 50%;
-   margin-right: 20px;
-   width: 230px;
-   height: 230px;
-   border: 1px solid #80808069;
-    }
-#profile p{
-    min-width: 500px;
-   font-size: 1.1em;
+
+#profile img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 1px solid #80808069;
+    margin-bottom: 15px;
+}
+
+#profile p {
+    font-size: 1.1em;
     line-height: 1.6;
+    max-width: 80%;
 }
+
 
 #skills h2{
     margin-bottom: 20px;
@@ -46,6 +56,7 @@ align-items: center;
     font-weight: bold;
 
 }
+
 #skills ul{
     list-style-type: none;
     margin: 5px 0;
@@ -60,3 +71,20 @@ align-items: center;
     border-radius: 5px;
     font-size: 1.1em;
 } 
+@media (min-width: 768px) {
+    #profile {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    #profile img {
+        margin-right: 20px;
+        width: 230px;
+        height: 230px;
+    }
+
+    #profile p {
+        min-width: 500px;
+    }
+}
